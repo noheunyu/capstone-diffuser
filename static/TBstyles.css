@@ -1,0 +1,33 @@
+:root {
+    --gray-100-color: #f9fbff;
+    --gray-150-color: #f4f6fb;
+    --gray-300-color: #e1e5ee;
+    --gray-500-color: #4f546c;
+}
+
+#dataTb table {
+    background-color: white;
+    border-collapse: collapse;
+    box-shadow: 0px 5px 10px var(--gray-300-color);
+    text-align: left;
+    overflow: hidden;
+}
+
+#dataTb table thead {
+    box-shadow: 0px 5px 10px var(--gray-300-color);
+}
+
+#dataTb table thead td {
+    padding: 1rem 2rem;
+    letter-spacing: 0.1rem;
+    font-size: 0.9rem;
+    font-weight: 900;
+}
+
+#dataTb table tbody td {
+    padding: 1rem 2rem;
+}
+
+#dataTb table tr:nth-child(even){
+    background-color: var(--gray-150-color);
+}

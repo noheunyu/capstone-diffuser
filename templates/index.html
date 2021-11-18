@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../static/styles.css">
+    <link rel="stylesheet" href="../static/TBstyles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+<body>
+
+    <header id = "clock" class="main-time">
+        <span></span>
+    </header>
+
+    <div class="grid-container">
+        <div>온도</div>
+        <div>습도</div>
+        <div>날씨</div>  
+        <div>지역</div>  
+    </div>
+
+
+    <div class="iot-div">
+        <div> <!--온도-->
+            <canvas id="TempGr" width="600" height="400"></canvas>
+        </div>
+        <div> <!--습도-->
+            <canvas id="HumGr" width="600" height="400"></canvas>
+        </div>
+        <div> <!--조향-->
+            <canvas id="DiffuserGr" width="800" height="400"></canvas>
+        </div>
+
+      </div>
+
+    <div id = "dataTb">
+        <table>
+            <thead>
+                <tr>
+                    <td>순번</td>
+                    <td>움직임</td>
+                    <td>InsertDATE</td>
+                    <td>온도</td>
+                    <td>습도</td>
+                    <td>FLOWER</td>
+                    <td>COTTON</td>
+                    <td>MUSK</td>
+                </tr>
+            </thead>
+            <tbody>
+                {% for i in data_list_full %}
+                <tr>
+                    <td>{{i[0]}}</td>
+                    <td>{{i[1]}}</td>
+                    <td>{{i[2]}}</td>
+                    <td>{{i[3]}}</td>
+                    <td>{{i[4]}}</td>
+                    <td>{{i[5]}}</td>
+                    <td>{{i[6]}}</td>
+                    <td>{{i[7]}}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+
+
+
+
+<script src="https://kit.fontawesome.com/6478f529f2.js"
+crossorigin="anonymous">
+</script>
+<script src="../static/js/clock.js"></script>
+<script src="../static/js/tempGr.js"></script>
+<script src="../static/js/humGr.js"></script>
+<script src="../static/js/diffuserGr.js"></script>
+</body>
+
+
+
+
+</html>
